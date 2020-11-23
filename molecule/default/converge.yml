@@ -1,0 +1,12 @@
+---
+  - name: Converge
+    hosts: windows
+    tasks:
+      - name: "Include ansible role"
+        include_role:
+          name: "ansible-role-windows-tasks"
+        vars:
+          scheduled_tasks:
+            - name: "MicrosoftEdgeUpdateTaskMachineCore"
+              enabled: true
+...

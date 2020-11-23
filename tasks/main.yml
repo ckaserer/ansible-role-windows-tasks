@@ -1,0 +1,13 @@
+---
+- name: Update scheduled tasks
+  community.windows.win_scheduled_task:
+    name: "{{ item.name }}"
+    enabled: "{{ item.enabled }}"
+  with_items: "{{ scheduled_tasks }}"
+  register: tasks_result
+
+- name: Print debug info
+  debug:
+    var: tasks_result
+    verbosity: 1
+...

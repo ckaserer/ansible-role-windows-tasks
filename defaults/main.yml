@@ -1,0 +1,5 @@
+---
+# scheduled_tasks:
+#   - name: "MicrosoftEdgeUpdateTaskMachineCore"
+#     enabled: false
+...
