@@ -1,0 +1,9 @@
+version: "~> 1.0"
+language: shell
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+script:
+- echo "just notify ansible galaxy"
